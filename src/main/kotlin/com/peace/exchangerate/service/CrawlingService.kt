@@ -19,8 +19,8 @@ class CrawlingService {
         val sales = scrappedData.select(EXCHANGE_RATE_DELIMITER)
         val countryToSale = mutableMapOf<String, String>()
         countries.forEachIndexed { idx, country ->
-            val sale = sales[idx].toString()
-            countryToSale[country.toString()] = sale
+            val sale = sales[idx].text()
+            countryToSale[country.text()] = sale
         }
         return countryToSale
     }
