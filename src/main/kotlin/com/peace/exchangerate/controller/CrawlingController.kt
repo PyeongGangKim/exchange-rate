@@ -14,7 +14,7 @@ class CrawlingController(
 
     @GetMapping("/exchange-rate")
     fun crawlingExchangeRate(): ResponseEntity<Map<String,String>> {
-        val response = crawlingService.crawling()
+        val response = crawlingService.crawlingExchangeRate()
         return ResponseEntity.ok(response)
     }
 }

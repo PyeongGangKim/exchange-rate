@@ -14,8 +14,7 @@ class CrawlingService {
         private val INTEREST_EXCHANGE_RATE = listOf("미국 USD", "유럽연합 EUR", "일본 JPY (100엔)")
     }
 
-
-    fun crawling(): MutableMap<String, String> {
+    fun crawlingExchangeRate(): MutableMap<String, String> {
         val scrappedData = Jsoup.connect(NAVER_FINANCE_URL).get()
         val countries = scrappedData.select(COUNTRY_DELIMITER)
         val sales = scrappedData.select(EXCHANGE_RATE_DELIMITER)
