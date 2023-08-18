@@ -17,4 +17,10 @@ class CrawlingController(
         val response = crawlingService.crawlingExchangeRate()
         return ResponseEntity.ok(response)
     }
+
+    @GetMapping("/exchange-rate/slack")
+    fun sendToExchangeRateInfoToSlack(): ResponseEntity<Unit> {
+        crawlingService.sendExchangeRateInfoToSlack()
+        return ResponseEntity.ok().build()
+    }
 }
