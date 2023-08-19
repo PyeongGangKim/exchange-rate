@@ -1,2 +1,5 @@
 ### 환율 스크랩핑
 http://localhost:8080/crawling/exchange-rate
+
+### 환율 send to Slack
+http://localhost:8080/crawling/exchange-rate/slack
